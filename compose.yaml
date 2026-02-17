@@ -1,12 +1,11 @@
 services:
   ambeserver:
-    container_name: AMBEserver
-    image: m8wat/ambeserver-amd64:latest     # for x86_64 systems
-    # image: m80wat/ambeserver-aarch64:latest # for arm64 systems (RPi5)
-    hostname: ambeserver_container
+    image: m8wat/ambeserver-amd64:0
+    container_name: ambeserver
+    hostname: t5810-ambeserver
     networks:
       ambeserver:
-        ipv4_address: 10.178.1.2
+        ipv4_address: 10.58.1.10
     ports:
       - "2460:2460/udp"
     devices:
@@ -25,4 +24,4 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 10.178.1.0/29
+        - subnet: 10.178.1.8/29
