@@ -10,7 +10,7 @@
 
 # Stage 1 - Download the source code and compile the executable.
 
-FROM alpine:latest as builder
+FROM alpine:latest AS builder
 
 WORKDIR /root/
 
@@ -28,4 +28,4 @@ COPY --from=builder /root/AMBEserver /root/AMBEserver
 
 EXPOSE 2460/udp
 
-ENTRYPOINT /root/AMBEserver
+ENTRYPOINT ["/root/AMBEserver"]
