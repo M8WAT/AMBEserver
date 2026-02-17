@@ -18,7 +18,7 @@
  *
  *   Adapted by K7VE from G4KLX dv3000d
  *
- *   Further adapted by 2E0WAT
+ *   Further adapted by M8WAT - 2024-05-19
  *
  *   Default baud rate changed. Was 230400 - Now 460800
  */

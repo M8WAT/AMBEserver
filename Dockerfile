@@ -14,10 +14,8 @@ FROM alpine:latest as builder
 
 WORKDIR /root/
 
-ADD AMBEserver.c https://raw.githubusercontent.com/M8WAT/AMBEserver/main/AMBEserver.c
-
 RUN apk add build-base && \
-#    wget https://raw.githubusercontent.com/M8WAT/AMBEserver/main/AMBEserver.c && \
+    wget https://raw.githubusercontent.com/M8WAT/AMBEserver/main/AMBEserver.c && \
     gcc -o AMBEserver AMBEserver.c
 
 # Stage 2 - Pull the compiled executable from builder & expose UDP port 2460.
