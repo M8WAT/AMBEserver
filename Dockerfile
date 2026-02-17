@@ -1,8 +1,8 @@
 #
 # Dockerfile to create AMBEserver Docker image.
 #
-# Created by Ash (2E0WAT)
-# Last Modified: 2024-05-20
+# Created by Ash (M8WAT)
+# Last Modified: 2026-02-17
 #
 # The image is created in two stages. This allows for a smaller final image.
 #
@@ -14,7 +14,7 @@ FROM alpine:latest as builder
 WORKDIR /root/
 
 RUN apk add build-base && \
-    wget https://raw.githubusercontent.com/2e0wat/AMBEserver/main/AMBEserver.c && \
+    wget https://raw.githubusercontent.com/M8WAT/AMBEserver/main/AMBEserver.c && \
     gcc -o AMBEserver AMBEserver.c
 
 # Stage 2 - Pull the compiled executable from builder & expose UDP port 2460.
