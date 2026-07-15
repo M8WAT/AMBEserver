@@ -41,8 +41,8 @@ Open the folder:
 
 Edit the Dockerfile as required and then build the image replacing the tag elements as necessary:
 
-    docker build -t <YOURDOCKERUSERNAME>/<IMAGENAME>:<VERSION>
+    docker build -t <YOURDOCKERUSERNAME>/<IMAGENAME>:<VERSION> .
 
 Example:
 
-    docker build -t m8wat/ambeserver:latest
+    docker build -t m8wat/ambeserver:latest .
