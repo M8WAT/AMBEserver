@@ -1,6 +1,6 @@
-# AMBEserver Docker Image by Ash, 2E0WAT.
+# AMBEserver Docker Image by Ash, M8WAT.
 # First Created: 2024-06-19
-# Last Modified: 2026-02-18
+# Last Modified: 2026-10-06
 #
 # This Docker image is created in two stages.
 #
@@ -34,7 +34,7 @@ WORKDIR /root/
 # Install Compilation Tools, Download the AMBEserver Source Code and Compile the
 # Executable
 RUN apk add build-base && \
-    wget https://raw.githubusercontent.com/2e0wat/AMBEserver/main/AMBEserver.c && \
+    wget https://raw.githubusercontent.com/m8wat/AMBEserver/main/AMBEserver.c && \
     gcc -o AMBEserver AMBEserver.c
 
 ################################### Stage 2 ####################################
